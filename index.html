@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section id="first">
+      <div class="container">
+        <div class="cart">
+          <div class="col-md-12 col-lg-10 mx-auto">
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-7 center-item">
+                  <img src="images/product-1.png" alt="" />
+                  <h5>iPhone 11 128GB Black</h5>
+                </div>
+
+                <div class="col-md-5 center-item">
+                  <div class="input-group number-spinner">
+                    <button
+                      class="btn btn-default"
+                      onclick='productAdd(false, "quantity1", "quantityAmount")'
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                      id="quantity1"
+                    />
+                    <button
+                      class="btn btn-default"
+                      onclick='productAdd(true, "quantity1","quantityAmount")'
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <h5>$ <span id="quantityAmount">1219</span></h5>
+                  <img
+                    src="images/remove.png"
+                    alt=""
+                    class="remove-item"
+                    id="remove1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-7 center-item mx-auto">
+                  <img src="images/product-2.png" alt="" />
+                  <h5>iPhone 11 Silicone Case - Black</h5>
+                </div>
+                <div class="col-md-5 center-item">
+                  <div class="input-group number-spinner">
+                    <button
+                      class="btn btn-default"
+                      id="removeItemBtn2"
+                      onclick='productAdd(false, "quantity2", "quantityAmount2")'
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                      id="quantity2"
+                    />
+                    <button
+                      class="btn btn-default"
+                      onclick='productAdd(true, "quantity2", "quantityAmount2")'
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <h5>$ <span id="quantityAmount2"> 59</span></h5>
+                  <img
+                    src="images/remove.png"
+                    alt=""
+                    class="remove-item"
+                    id="remove2"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5>Subtotal:</h5>
+                  <h5>Tax:</h5>
+                  <h5>Total:</h5>
+                </div>
+
+                <div class="col-md-4 status">
+                  <h5>$ <span id="subTotal">1278</span></h5>
+                  <h5>$ <span id="tax">128</span></h5>
+                  <h5>$ <span id="total">1403</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 pt-4 pb-4">
+              <button type="button" class="btn btn-success check-out" id="hide">
+                Check Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="second">
+      <div class="container">
+        <div id="wrapper">
+          <div>
+            <h2 class=" text-center"> Thanks For Purchasing</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Total Payment</h5>
+            </div>
+            <div class="col-md-6">
+              <h5>$ <span id="payableAmount">12</span> </h5>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
